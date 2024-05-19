@@ -1,0 +1,14 @@
+#main{
+    display: flex;
+    width: 14%;
+    justify-content: space-around;
+    margin: auto;
+
+}
+#btnn{
+    display: flex;
+    width: 14%;
+    justify-content: space-around;
+    margin: auto;
+    height: 20px;
+}
