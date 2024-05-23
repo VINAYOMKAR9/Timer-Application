@@ -6,17 +6,20 @@ let mCount =0;
 let sCount = 0;
 let id;
 btn.addEventListener('click',()=>{
-    id =setInterval(()=>{
-    sCount++;
-    if(sCount==59){
-        mCount++;
-        sCount=0
+    if(id==undefined){
+        console.log(id)
+        id =setInterval(()=>{
+            sCount++;
+            if(sCount==59){
+                mCount++;
+                sCount=0
+            }
+            document.querySelector('#sec').textContent=sCount;
+            document.querySelector('#min').textContent=mCount;
+        },1000)
     }
-    document.querySelector('#sec').textContent=sCount;
-    document.querySelector('#min').textContent=mCount;
-    },1000)
-})
-
+    })
+    
 document.getElementById('Stop').addEventListener('click',()=>{
     clearInterval(id)
 });
